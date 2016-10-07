@@ -6,9 +6,8 @@ using System.Threading.Tasks;
 
 namespace ACM.BL
 {
-    class Product
+    public class Product
     {
-
         public Product()
         {
 
@@ -19,22 +18,15 @@ namespace ACM.BL
             this.ProductId = productId;
         }
 
-        public Decimal? CurrentPrice { get; set; } //The ? means you can have a null
+        public Decimal? CurrentPrice { get; set; }
         public int ProductId { get; private set; }
         public string ProductDescription { get; set; }
         public string ProductName { get; set; }
 
-
-        public Product Retrieve(int productId)
-        {
-            return new Product();
-        }
-
-        public bool Save()
-        {
-            return true;
-        }
-
+        /// <summary>
+        /// Validates the product data.
+        /// </summary>
+        /// <returns></returns>
         public bool Validate()
         {
             var isValid = true;
@@ -44,9 +36,5 @@ namespace ACM.BL
 
             return isValid;
         }
-
-
-
-
     }
 }

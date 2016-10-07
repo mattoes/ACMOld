@@ -8,74 +8,59 @@ namespace ACM.BL
 {
     public class Customer
     {
-
         public Customer()
+            : this(0)
         {
 
         }
-
 
         public Customer(int customerId)
         {
             this.CustomerId = customerId;
+            AddressList = new List<Address>();
         }
 
-        private string _lastName; //Backing field
+        public List<Address> AddressList { get; set; }
 
-        public string LastName //Property
+        public int CustomerType { get; set; }
+        public static int InstanceCount { get; set; }
+
+        private string _lastName;
+        public string LastName
         {
-            get // Used to return the backing field _lastName, you can include code to perform any opperations prior to returning the value
-                //i.e code to reformat the data or verify the user is able to access this data (permissions)
+            get
             {
                 // Any code here
                 return _lastName;
             }
-            set // This is accessed when the code assigns a value to the property, can add code to validate the value before assigning it
+            set
             {
                 // Any code here
                 _lastName = value;
             }
         }
 
-        public static int InstanceCount { get; set; }
-
         public string FirstName { get; set; }
+
         public string EmailAddress { get; set; }
-        public int CustomerId { get; private set; } //private set: We can set the property in the code but any code external to this class cannot
+
+        public int CustomerId { get; private set; }
 
         public string FullName
         {
             get
             {
-                string fullname = LastName;
-
+                string fullName = LastName;
                 if (!string.IsNullOrWhiteSpace(FirstName))
                 {
-                    if (!string.IsNullOrWhiteSpace(fullname))
+                    if (!string.IsNullOrWhiteSpace(fullName))
                     {
-                        fullname += ", ";
+                        fullName += ", ";
                     }
-                    fullname += FirstName;
+                    fullName += FirstName;
                 }
-                return fullname;
+                return fullName;
             }
-
-        }
-
-
-        public Customer Retrieve(int customerId)
-        {
-            return new Customer();
-        }
-
-        public List<Customer> Retrieve()
-        {
-            return new List<Customer>();
-        }
-
-        public bool Save()
-        {
-            return true;
         }
 
         public bool Validate()
@@ -87,7 +72,5 @@ namespace ACM.BL
 
             return isValid;
         }
-
-
     }
 }
