@@ -1,7 +1,6 @@
 C:\Git\ACM\ACM.BLTest\bin\Debug\ACM.BLTest.dll
 C:\Git\ACM\ACM.BLTest\bin\Debug\ACM.BLTest.pdb
 C:\Git\ACM\ACM.BLTest\bin\Debug\ACM.BL.dll
-C:\Git\ACM\ACM.BLTest\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll
 C:\Git\ACM\ACM.BLTest\bin\Debug\ACM.BL.pdb
 C:\Git\ACM\ACM.BLTest\obj\Debug\ACM.BLTest.csprojResolveAssemblyReference.cache
 C:\Git\ACM\ACM.BLTest\obj\Debug\ACM.BLTest.dll
